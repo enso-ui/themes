@@ -1,0 +1,59 @@
+.delete, .modal-close {
+    background-color: rgba(10, 10, 10, 0.4);
+
+    &:hover {
+        background-color: rgba(10, 10, 10, 0.8);
+    }
+}
+
+.button {
+    &.is-hovered,
+    &:hover {
+        background-color: darken($button-background-color, 3%);
+    }
+
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        $color-invert: nth($pair, 2);
+
+        &.is-#{$name} {
+            &.is-hovered,
+            &:hover {
+                background-color: darken($color, 3%);
+            }
+        }
+    }
+}
+
+.label {
+    color: $grey-lighter;
+}
+
+.tag:not(body) {
+    background-color: $grey;
+}
+
+.aside {
+	background: $body-background-color;
+}
+
+.has-background-light {
+	background: #2b3e4f !important;
+}
+
+.editor.wysiwyg {
+	.content.wysiwyg-content {
+		&:hover {
+			color: $input-hover-color;
+			border-color: $grey-light;
+		}
+
+		color: $input-color;
+		background-color: $input-background-color;
+		border-color: $input-border-color;
+
+		&.is-danger {
+			border-color: $danger;
+		}
+	}
+}

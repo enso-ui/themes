@@ -1,0 +1,38 @@
+{
+  "name": "@enso-ui/themes",
+  "version": "1.0.0",
+  "description": "Enso UI Themes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laravel-enso/themes.git"
+  },
+  "keywords": [
+    "themes",
+    "bulma"
+  ],
+  "author": "Adrian Ocneanu <aocneanu@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laravel-enso/themes/issues"
+  },
+  "homepage": "https://github.com/laravel-enso/themes#readme",
+  "devDependencies": {
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "cross-env": "^5.1.6",
+    "eslint": "^5.0.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "laravel-mix": "3.0.0",
+    "node-sass": "^4.11.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "bulma": "^0.7.2",
+    "bulma-extensions": "^2.2.1",
+    "flatpickr": "^4.5.0"
+  }
+}
