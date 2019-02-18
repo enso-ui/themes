@@ -1,0 +1,12 @@
+.vue-filter .tabs-wrapper .tabs {
+    li {
+        a:hover {
+            border-color: $warning;
+        }
+
+        &.is-active a {
+            background-color: $warning;
+            border-color: $warning;
+        }
+    }
+}
