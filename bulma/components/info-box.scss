@@ -4,7 +4,7 @@
     position: relative;
 
     .box-header {
-        border-radius: inherit
+        border-radius: inherit;
     }
 
     @each $name, $pair in $colors {
