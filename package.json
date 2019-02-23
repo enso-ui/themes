@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laravel-enso/themes.git"
+    "url": "git+https://github.com/enso-ui/themes.git"
   },
   "keywords": [
     "themes",
@@ -17,9 +17,9 @@
   "author": "Adrian Ocneanu <aocneanu@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/laravel-enso/themes/issues"
+    "url": "https://github.com/enso-ui/themes/issues"
   },
-  "homepage": "https://github.com/laravel-enso/themes#readme",
+  "homepage": "https://github.com/enso-ui/themes#readme",
   "devDependencies": {
     "@vue/eslint-config-airbnb": "^4.0.0",
     "babel-eslint": "^10.0.1",
