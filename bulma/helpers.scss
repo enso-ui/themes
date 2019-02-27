@@ -168,3 +168,12 @@
         box-shadow: 0 2px 18px 1px rgba(42,51,83,.35);
     }
 }
+
+.no-scrollbars {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+
+    &::-webkit-scrollbar { 
+        display: none;
+    }
+}
