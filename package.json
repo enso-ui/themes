@@ -1,6 +1,6 @@
 {
   "name": "@enso-ui/themes",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Enso UI Themes",
   "main": "index.js",
   "scripts": {
