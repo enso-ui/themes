@@ -86,7 +86,7 @@
       background: $color;
       color: $tooltip-text;
       border-radius: 5px;
-      box-shadow: 0 5px 30px rgba($tooltip-background, .1);
+      box-shadow: 0 5px 30px rgba($tooltip-text, .1);
     }
 
     .popover-arrow {
