@@ -1,4 +1,11 @@
 .vue-filter .tabs-wrapper .tabs {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+
+    &::-webkit-scrollbar { 
+        display: none;
+    }
+    
     li {
         a:hover {
             border-color: $warning;
