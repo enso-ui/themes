@@ -1,3 +1,6 @@
+$right: left;
+$left: right;
+
 @import './light/variables';
 
 @import "~bulma-rtl/bulma-rtl";
@@ -12,4 +15,4 @@
 
 @import "./light/enso";
 
-@import './helpers-rtl';
+@import './helpers';
