@@ -31,6 +31,10 @@
 
 .tag:not(body) {
     background-color: $grey;
+
+    &.is-dark {
+        color: $grey-lighter;
+    }
 }
 
 .aside {
