@@ -142,14 +142,21 @@
     opacity: 0.7;
 }
 
-.button.is-naked {
-    background: 0;
-    border: none;
+.is-naked {
     opacity: 0.6;
     transition: opacity ease 0.3s;
     &:hover {
         opacity: 1;
     }
+}
+
+a.is-naked {
+    color: inherit;
+}
+
+.button.is-naked {
+    background: 0;
+    border: none;
     &:focus {
         box-shadow: unset;
     }
