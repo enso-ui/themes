@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/enso-ui/themes#readme",
   "dependencies": {
-    "bulma": "^0.7.2",
+    "bulma": "^0.8.0",
     "bulma-extensions": "^2.2.1",
     "bulma-rtl": "^0.7.1",
     "flatpickr": "^4.5.0"
