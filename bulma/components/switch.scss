@@ -1,17 +1,21 @@
 .vue-switch {
+    input {
+        left: 8px;
+    }
+
     .control-switch {
         background-color: $border;
         border: 1px solid $border;
-        
+
         &:before {
             background-color: $grey-light;
         }
-    
+
         &:after {
             background-color: #fff;
             box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1);
         }
-    
+
         &.checked {
             border-color: $text;
             background-color: $text;
