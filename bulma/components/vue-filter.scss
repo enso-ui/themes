@@ -2,10 +2,10 @@
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
 
-    &::-webkit-scrollbar { 
+    &::-webkit-scrollbar {
         display: none;
     }
-    
+
     li {
         a:hover {
             border-color: $warning;
@@ -14,6 +14,24 @@
         &.is-active a {
             background-color: $warning;
             border-color: $warning;
+        }
+    }
+}
+
+.vue-filter {
+    @each $name, $pair in $colors {
+        $color: nth($pair, 1);
+        &.is-#{$name} {
+            .tabs-wrapper .tabs li {
+                a:hover {
+                    border-color: $color;
+                }
+
+                &.is-active a {
+                    background-color: $color;
+                    border-color: $color;
+                }
+            }
         }
     }
 }
