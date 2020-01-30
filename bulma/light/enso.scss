@@ -18,3 +18,9 @@
 		}
 	}
 }
+
+.level.is-hoverable {
+    &:hover {
+        background-color: $light;
+    }
+}
