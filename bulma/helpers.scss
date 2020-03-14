@@ -185,6 +185,10 @@ a.is-naked {
     }
 }
 
+.is-hoverable:hover {
+    background-color: $light;
+}
+
 .form-box {
     position: relative;
     z-index: 2;
