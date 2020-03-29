@@ -1,3 +1,5 @@
+@import './fonts';
+
 @import './variables';
 
 $right: left;
@@ -6,8 +8,6 @@ $left: right;
 @import './dark/variables';
 
 @import "~bulma-rtl/bulma-rtl";
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 @import "~flatpickr/dist/themes/dark";
 
