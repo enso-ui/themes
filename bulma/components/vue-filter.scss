@@ -19,6 +19,8 @@
 }
 
 .vue-filter {
+    background-color: $box-background-color;
+
     @each $name, $pair in $colors {
         $color: nth($pair, 1);
         &.is-#{$name} {
