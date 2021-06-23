@@ -2,12 +2,13 @@
 
 @import './variables';
 
+$rtl: true;
 $right: left;
 $left: right;
 
 @import './dark/variables';
 
-@import "~bulma-rtl/bulma-rtl";
+@import "~bulma/bulma";
 
 @import "~flatpickr/dist/themes/dark";
 

@@ -1,13 +1,12 @@
 @import './variables';
 
+$rtl: true;
 $right: left;
 $left: right;
 
 @import './light/variables';
 
-@import "~bulma-rtl/bulma-rtl";
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import "~bulma/bulma";
 
 @import "~flatpickr/dist/themes/light";
 
