@@ -23,7 +23,7 @@
   "dependencies": {
     "@enso-ui/ui": "^4.0",
     "bulma": "^0.9.0",
-    "bulma-extensions": "^2.2.1",
+    "bulma-extensions": "^6.0.0",
     "flatpickr": "^4.5.0"
   },
   "devDependencies": {
