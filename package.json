@@ -21,22 +21,20 @@
   },
   "homepage": "https://github.com/enso-ui/themes#readme",
   "dependencies": {
-    "@enso-ui/ui": "^4.0",
+    "@enso-ui/ui": "^5.0",
     "bulma": "^0.9.0",
     "bulma-extensions": "^6.0.0",
     "flatpickr": "^4.5.0"
   },
   "devDependencies": {
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@vue/cli-plugin-babel": "^4.0.5",
-    "@vue/cli-plugin-eslint": "^4.0.5",
-    "@vue/cli-service": "^4.0.5",
+    "@vue/cli-plugin-babel": "5.0.0-beta.6",
+    "@vue/cli-plugin-eslint": "5.0.0-beta.6",
     "@vue/eslint-config-airbnb": "^5.0.0",
     "autoprefixer": "^9.6.1",
     "babel-eslint": "^10.0.1",
     "cross-env": "^6.0.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.0",
     "eslint-import-resolver-alias": "^1.1.2",
-    "eslint-plugin-vue": "^6.0.0"
+    "eslint-plugin-vue": "^8.0.0"
   }
 }
