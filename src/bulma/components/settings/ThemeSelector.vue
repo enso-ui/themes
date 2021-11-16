@@ -1,6 +1,6 @@
 <template>
     <core-theme-selector>
-        <template #:default="{ itemEvents, multiTheme }">
+        <template #default="{ itemEvents, multiTheme }">
             <div class="level is-mobile"
                 v-if="multiTheme">
                 <div class="level-left">
