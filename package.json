@@ -22,11 +22,12 @@
   "homepage": "https://github.com/enso-ui/themes#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
-    "@fortawesome/free-solid-svg-icons": "^5.2.0",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/vue-fontawesome": "3.0.0-5",
     "bulma": "^0.9.0",
     "bulma-extensions": "^6.0.0",
-    "flatpickr": "^4.5.0"
+    "flatpickr": "^4.5.0",
+    "vuex": "^4.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "5.0.0-beta.6",
