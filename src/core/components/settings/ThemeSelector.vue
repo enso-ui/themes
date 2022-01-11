@@ -22,7 +22,7 @@ export default {
     },
 
     render() {
-        return this.$scopedSlots.default({
+        return this.$slots.default({
             multiTheme: this.multiTheme,
             itemEvents: {
                 click: () => this.setTheme(this.alternate),
