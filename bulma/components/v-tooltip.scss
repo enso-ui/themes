@@ -7,13 +7,6 @@
       border-radius: 5px;
       padding: 5px 10px 4px;
     }
-
-    .v-popper__arrow-container {
-      .v-popper__arrow-inner, .v-popper__arrow-outer {
-        border-color: $tooltip-background;
-        box-shadow: 0 3px 10px rgba($tooltip-text, .1);
-      }
-    }
   }
 
   &.popover {
