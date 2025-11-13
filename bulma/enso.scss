@@ -20,6 +20,10 @@
     margin-right: auto;
 }
 
+.min-w-0 {
+    min-width: 0;
+}
+
 .is-bold {
     font-weight: bold;
 }
@@ -64,6 +68,10 @@ a.is-naked {
         -webkit-box-shadow: 0 0.1em 0.3em 0.2em rgba(42,51,83,.35);
         box-shadow: 0 0.1em 0.3em 0.2em rgba(42,51,83,.35);
     }
+}
+
+.is-scrollable {
+    overflow: scroll;
 }
 
 .no-scrollbars {
