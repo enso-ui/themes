@@ -2,10 +2,7 @@
   "name": "@enso-ui/themes",
   "version": "3.1.0",
   "description": "Enso UI Themes",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "src/bulma/register.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/enso-ui/themes.git"
@@ -15,29 +12,21 @@
     "bulma"
   ],
   "author": "Adrian Ocneanu <aocneanu@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/enso-ui/themes/issues"
   },
   "homepage": "https://github.com/enso-ui/themes#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.2",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "@fortawesome/vue-fontawesome": "3.0.0-5",
-    "bulma": "^0.9.0",
-    "bulma-extensions": "^6.0.0",
-    "flatpickr": "^4.5.0",
-    "vuex": "^4.0.0"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "5.0.0-beta.6",
-    "@vue/cli-plugin-eslint": "5.0.0-beta.6",
-    "@vue/eslint-config-airbnb": "^5.0.0",
-    "autoprefixer": "^9.6.1",
-    "babel-eslint": "^10.0.1",
-    "cross-env": "^6.0.0",
-    "eslint": "^7.0.0",
-    "eslint-import-resolver-alias": "^1.1.2",
-    "eslint-plugin-vue": "^8.0.3"
+    "@enso-ui/localisation": "^6.0.0",
+    "@enso-ui/ui": "^7.0.0",
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.2.0",
+    "@fortawesome/vue-fontawesome": "3.1.3",
+    "bulma": "^1.0.0",
+    "bulma-extensions": "^6.2.7",
+    "flatpickr": "^4.6.13",
+    "pinia": "^3.0.0",
+    "vue": "^3.0"
   }
 }

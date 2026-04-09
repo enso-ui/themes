@@ -1,40 +1,39 @@
 .vue-switch {
+    --enso-switch-accent: var(--bulma-dark);
+
     input {
         display: none;
     }
 
     .control-switch {
-        background-color: $border;
-        border: 1px solid $border;
+        background-color: var(--bulma-border);
+        border: 1px solid var(--bulma-border);
 
         &:before {
-            background-color: $grey-light;
+            background-color: var(--bulma-text-light);
         }
 
         &:after {
-            background-color: #fff;
-            box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1);
+            background-color: var(--bulma-scheme-main);
+            box-shadow: none;
         }
 
         &.checked {
-            border-color: $text;
-            background-color: $text;
+            border-color: var(--enso-switch-accent);
+            background-color: var(--enso-switch-accent);
+        }
+
+        &.checked.disabled {
+            border-color: color-mix(in srgb, var(--enso-switch-accent) 55%, white);
+            background-color: color-mix(in srgb, var(--enso-switch-accent) 55%, white);
+            cursor: not-allowed;
         }
     }
 
-    @each $name, $pair in $colors {
-        $color: nth($pair, 1);
-        &.is-#{$name} {
-            .control-switch.checked {
-                border-color: $color;
-                background-color: $color;
-
-                &.disabled {
-                    border-color: lighten($color, 25%);
-                    background-color: lighten($color, 25%);
-                    cursor: not-allowed;
-                }
-            }
-        }
-    }
+    &.is-primary { --enso-switch-accent: var(--bulma-primary); }
+    &.is-link { --enso-switch-accent: var(--bulma-link); }
+    &.is-info { --enso-switch-accent: var(--bulma-info); }
+    &.is-success { --enso-switch-accent: var(--bulma-success); }
+    &.is-warning { --enso-switch-accent: var(--bulma-warning); }
+    &.is-danger { --enso-switch-accent: var(--bulma-danger); }
 }

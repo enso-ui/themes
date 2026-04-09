@@ -1,10 +1,10 @@
 .v-popper--theme-dropdown, .v-popper--theme-tooltip {
   .v-popper__wrapper {
     .v-popper__inner {
-      box-shadow: 0 3px 10px rgba($tooltip-text, .1);
+      box-shadow: none;
       background: $tooltip-background;
       color: $tooltip-text;
-      border-radius: 5px;
+      border-radius: $radius;
       padding: 5px 10px 4px;
     }
   }
@@ -15,8 +15,8 @@
     .popover-inner {
       background: $color;
       color: $tooltip-text;
-      border-radius: 5px;
-      box-shadow: 0 5px 30px rgba($tooltip-text, .1);
+      border-radius: $radius;
+      box-shadow: none;
     }
 
     .popover-arrow {

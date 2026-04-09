@@ -1,16 +1,26 @@
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex';
+import { useStore } from '../../../utils/pinia';
 
 export default {
     name: 'ThemeSelector',
 
     computed: {
-        ...mapState('layout', ['themes']),
-        ...mapGetters('preferences', ['theme']),
-        ...mapGetters('localisation', ['rtl']),
+        themes() {
+            return useStore('layout').themes;
+        },
+        theme() {
+            return useStore('preferences').global.theme ?? '';
+        },
+        rtl() {
+            const localisation = useStore('localisation');
+            const preferences = useStore('preferences');
+
+            return localisation.rtlLanguages.includes(preferences.global.lang);
+        },
         alternate() {
             return Object.keys(this.themes)
-                .find(theme => theme.replace('-rtl', '') !== this.theme.replace('-rtl', '')) + (this.rtl ? '-rtl' : '');
+                .find(theme => theme.replace('-rtl', '') !== this.theme.replace('-rtl', ''))
+                + (this.rtl ? '-rtl' : '');
         },
         multiTheme() {
             return Object.keys(this.themes).length > 1;
@@ -18,7 +28,9 @@ export default {
     },
 
     methods: {
-        ...mapActions('preferences', ['setTheme']),
+        setTheme(theme) {
+            return useStore('preferences').setTheme(theme);
+        },
     },
 
     render() {
@@ -30,5 +42,4 @@ export default {
         });
     },
 };
-
 </script>

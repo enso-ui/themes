@@ -13,7 +13,7 @@
                         <a class="button is-naked"
                             v-on="itemEvents">
                             <span class="icon is-small">
-                                <fa icon="lightbulb"/>
+                                <fa :icon="faLightbulb"/>
                             </span>
                         </a>
                     </div>
@@ -25,11 +25,8 @@
 
 <script>
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import CoreThemeSelector from '../../../core/components/settings/ThemeSelector.vue';
-
-library.add(faLightbulb);
 
 export default {
     name: 'ThemeSelector',
@@ -37,5 +34,9 @@ export default {
     components: { CoreThemeSelector, Fa },
 
     inject: ['i18n'],
+
+    data: () => ({
+        faLightbulb,
+    }),
 };
 </script>
