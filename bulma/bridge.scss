@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Muli:wght@500;800&display=swap');
 
 :root {
-    --bulma-family-primary: "Ubuntu", "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    --bulma-family-secondary: var(--bulma-family-primary);
+    --bulma-family-primary: "Montserrat", "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    --bulma-family-secondary: "Muli", var(--bulma-family-primary);
     --bulma-body-family: var(--bulma-family-primary);
-    --bulma-body-weight: var(--bulma-weight-normal);
-    --bulma-strong-weight: var(--bulma-weight-medium);
     --bulma-label-weight: var(--bulma-weight-normal);
     --bulma-button-weight: var(--bulma-weight-normal);
     --bulma-control-padding-vertical: calc(0.25em - 1px);
@@ -21,7 +19,7 @@
     --enso-sidebar-collapsed-width: 3.5rem;
 
     --bulma-navbar-height: 3.25rem;
-    --bulma-control-height: 2.125em;
+    --bulma-control-height: 2.125rem;
     --bulma-radius-small: 0.2rem;
     --bulma-radius: 0.4rem;
     --bulma-radius-large: 0.6rem;
@@ -29,98 +27,6 @@
 
 .vue-form .label {
     font-weight: var(--bulma-label-weight);
-}
-
-.button,
-.input,
-.textarea,
-.select select,
-.vue-select .button.input,
-.dropdown.vue-dropdown .button.input,
-.flatpickr-input.input,
-.money.input {
-    min-height: var(--bulma-control-height);
-    height: var(--bulma-control-height);
-    border-radius: var(--bulma-radius);
-    font-size: 1rem;
-    line-height: 1.5;
-    padding-block: var(--bulma-control-padding-vertical);
-    padding-inline: var(--bulma-control-padding-horizontal);
-}
-
-.button,
-.vue-select .button.input,
-.select select,
-.input,
-.textarea {
-    font-weight: var(--bulma-body-weight, var(--bulma-weight-normal));
-}
-
-.button {
-    padding-block: var(--bulma-button-padding-vertical);
-    padding-inline: var(--bulma-button-padding-horizontal);
-}
-
-.label,
-.button,
-.input,
-.textarea,
-.select select,
-.vue-select .button.input,
-.dropdown.vue-dropdown .button.input,
-.flatpickr-input.input,
-.money.input {
-    font-family: var(--bulma-body-family);
-}
-
-.vue-select .button.input .control-display,
-.vue-select .button.input .selection-label,
-.vue-select .button.input .placeholder {
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-}
-
-.vue-select .button.input,
-.vue-select .button.input .control-display,
-.vue-select .button.input .selection-label,
-.vue-select .button.input .placeholder,
-.select select {
-    font-size: 1rem;
-    font-weight: var(--bulma-body-weight, var(--bulma-weight-normal));
-}
-
-.vue-select.tags .tag,
-.vue-select .label.tag {
-    border-radius: var(--bulma-radius);
-    min-height: 1.75em;
-    font-size: 1em;
-    font-family: var(--bulma-body-family);
-    font-weight: var(--bulma-body-weight, var(--bulma-weight-normal));
-}
-
-.vue-select.tags .tag {
-    display: inline-flex;
-    align-items: center;
-    margin: 0.075em 0;
-}
-
-[dir='ltr'] .vue-select.tags .tag {
-    padding: 0.35em 0 0.35em 0.5em;
-}
-
-[dir='rtl'] .vue-select.tags .tag {
-    padding: 0.35em 0.5em 0.35em 0;
-}
-
-.vue-select.tags .tag .tag.is-delete {
-    flex: none;
-}
-
-.vue-select .label.tag.is-success,
-.vue-select .label.tag.is-warning,
-.vue-select .label.tag.is-info {
-    font-weight: var(--bulma-body-weight, var(--bulma-weight-normal));
 }
 
 @mixin enso-shared-bulma-bridge {
