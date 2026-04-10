@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/enso-ui/themes#readme",
   "dependencies": {
-    "@enso-ui/localisation": "^6.0.0",
-    "@enso-ui/ui": "^7.0.0",
+    "@enso-ui/localisation": "^5.2.0",
+    "@enso-ui/ui": "^7.1.0",
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/vue-fontawesome": "3.1.3",
