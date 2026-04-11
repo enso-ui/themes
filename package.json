@@ -1,6 +1,6 @@
 {
   "name": "@enso-ui/themes",
-  "version": "3.3.7",
+  "version": "3.3.8",
   "description": "Enso UI Themes",
   "main": "src/bulma/register.js",
   "repository": {

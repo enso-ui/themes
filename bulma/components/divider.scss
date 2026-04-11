@@ -1,7 +1,7 @@
 .is-divider {
-    border-top: 1px solid $grey-light;
+    border-top: 1px solid var(--bulma-border, #d9e1ec);
 }
 
 .is-divider[data-title]::after {
-    background: $light;
+    background: var(--bulma-light, var(--bulma-scheme-main-bis, #f5f5f5));
 }

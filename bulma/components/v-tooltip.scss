@@ -2,25 +2,23 @@
   .v-popper__wrapper {
     .v-popper__inner {
       box-shadow: none;
-      background: $tooltip-background;
-      color: $tooltip-text;
-      border-radius: $radius;
+      background: var(--enso-tooltip-background, var(--bulma-scheme-main, #fff));
+      color: var(--enso-tooltip-color, var(--bulma-text, #1f2937));
+      border-radius: var(--bulma-radius, 0.4rem);
       padding: 5px 10px 4px;
     }
   }
 
   &.popover {
-    $color: $tooltip-background;
-
     .popover-inner {
-      background: $color;
-      color: $tooltip-text;
-      border-radius: $radius;
+      background: var(--enso-tooltip-background, var(--bulma-scheme-main, #fff));
+      color: var(--enso-tooltip-color, var(--bulma-text, #1f2937));
+      border-radius: var(--bulma-radius, 0.4rem);
       box-shadow: none;
     }
 
     .popover-arrow {
-      border-color: $color;
+      border-color: var(--enso-tooltip-background, var(--bulma-scheme-main, #fff));
     }
   }
 
