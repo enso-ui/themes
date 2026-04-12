@@ -18,19 +18,21 @@
   },
   "homepage": "https://github.com/enso-ui/themes#readme",
   "dependencies": {
-    "@enso-ui/localisation": "^5.2.0",
-    "@enso-ui/ui": "^7.1.0",
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/vue-fontawesome": "3.1.3",
     "flatpickr": "^4.6.13"
   },
   "peerDependencies": {
+    "@enso-ui/localisation": "^5.2.0",
+    "@enso-ui/ui": "^7.1.0",
     "bulma": "^1.0.4",
     "pinia": "^3.0.3",
     "vue": "^3.5.0"
   },
   "devDependencies": {
+    "@enso-ui/localisation": "^5.2.0",
+    "@enso-ui/ui": "^7.1.0",
     "bulma": "^1.0.4",
     "pinia": "^3.0.3",
     "vue": "^3.5.0"
