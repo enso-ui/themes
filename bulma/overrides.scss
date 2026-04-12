@@ -8,7 +8,8 @@
     --bulma-control-padding-horizontal: calc(0.5em - 1px);
     --bulma-button-padding-vertical: 0.25em;
     --bulma-button-padding-horizontal: 0.625em;
-    --bulma-navbar-height: 3.25rem;
+    --enso-navbar-height: 3.25rem;
+    --enso-navbar-breakpoint: 0px;
     --bulma-control-height: 2.125rem;
     --bulma-radius-small: var(--bulma-radius);
     --bulma-radius: 0.5rem;
@@ -23,6 +24,7 @@
     --enso-sidebar-collapsed-width: 3.5rem;
     --enso-tag-height: 1.8em;
     --enso-tag-padding-x: 0.6em;
+    --bulma-navbar-height: var(--enso-navbar-height);
 }
 
 @mixin enso-shared-bulma-bridge {
