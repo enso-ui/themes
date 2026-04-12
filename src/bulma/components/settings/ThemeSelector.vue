@@ -1,21 +1,33 @@
 <template>
     <core-theme-selector>
-        <template #default="{ itemEvents, multiTheme }">
-            <div class="level is-mobile"
-                v-if="multiTheme">
+        <template #default="{ theme, options, update }">
+            <div class="level is-mobile theme-selector">
                 <div class="level-left">
                     <div class="level-item">
                         {{ i18n('Theme') }}
                     </div>
                 </div>
                 <div class="level-right">
-                    <div class="level-item">
-                        <a class="button is-naked"
-                            v-on="itemEvents">
-                            <span class="icon is-small">
-                                <fa :icon="faLightbulb"/>
-                            </span>
-                        </a>
+                    <div class="level-item settings-control-select">
+                        <dropdown>
+                            <template #label>
+                                <span class="icon theme-trigger-icon"
+                                    :class="iconClass(theme)">
+                                    <fa :icon="themeIcon(theme)"/>
+                                </span>
+                            </template>
+                            <template #items>
+                                <dropdown-item v-for="(option, key) in options"
+                                    :key="key"
+                                    :selected="theme === key"
+                                    @select="update(key)">
+                                    <span class="icon is-small"
+                                        :class="iconClass(key)">
+                                        <fa :icon="themeIcon(key)"/>
+                                    </span>
+                                </dropdown-item>
+                            </template>
+                        </dropdown>
                     </div>
                 </div>
             </div>
@@ -24,19 +36,59 @@
 </template>
 
 <script>
+import { Dropdown, DropdownItem } from '@enso-ui/dropdown/bulma';
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
-import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import {
+    faDesktop,
+    faMoon,
+    faSun,
+} from '@fortawesome/free-solid-svg-icons';
 import CoreThemeSelector from '../../../core/components/settings/ThemeSelector.vue';
 
 export default {
     name: 'ThemeSelector',
 
-    components: { CoreThemeSelector, Fa },
+    components: {
+        CoreThemeSelector,
+        Dropdown,
+        DropdownItem,
+        Fa,
+    },
 
     inject: ['i18n'],
 
     data: () => ({
-        faLightbulb,
+        themeIcons: {
+            dark: faMoon,
+            light: faSun,
+            system: faDesktop,
+        },
+        themeIconClasses: {
+            dark: 'has-text-link',
+            light: 'has-text-warning',
+            system: 'has-text-success',
+        },
     }),
+
+    methods: {
+        iconClass(theme) {
+            return this.themeIconClasses[theme] ?? 'has-text-grey';
+        },
+        themeIcon(theme) {
+            return this.themeIcons[theme] ?? faDesktop;
+        },
+    },
 };
 </script>
+
+<style lang="scss">
+    .theme-selector {
+        .theme-trigger-icon {
+            transition: color .15s ease;
+        }
+
+        .button .icon:first-child {
+            margin: 0;
+        }
+    }
+</style>

@@ -1,32 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Muli:wght@500;800&display=swap');
-
 :root {
-    --bulma-family-primary: "Montserrat", "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    --bulma-family-secondary: "Muli", var(--bulma-family-primary);
-    --bulma-body-family: var(--bulma-family-primary);
+    --bulma-size-normal: 0.95rem;
+    --bulma-body-size: 0.95rem;
+    --bulma-body-font-size: 0.95rem;
     --bulma-label-weight: var(--bulma-weight-normal);
     --bulma-button-weight: var(--bulma-weight-normal);
     --bulma-control-padding-vertical: calc(0.25em - 1px);
     --bulma-control-padding-horizontal: calc(0.5em - 1px);
     --bulma-button-padding-vertical: 0.25em;
     --bulma-button-padding-horizontal: 0.625em;
+    --bulma-navbar-height: 3.25rem;
+    --bulma-control-height: 2.125rem;
+    --bulma-radius-small: var(--bulma-radius);
+    --bulma-radius: 0.5rem;
+    --bulma-radius-large: 0.55rem;
+    --bulma-tag-radius: 0.45rem;
+    --bulma-tag-delete-margin: 0;
     --bulma-box-shadow: 0 0.05em 0.15em 0.1em rgba(10, 10, 10, 0.15);
     --bulma-card-shadow: 0 0.05em 0.15em 0.1em rgba(10, 10, 10, 0.15);
     --bulma-card-header-shadow: 0 0.1em 0.1em rgba(10, 10, 10, 0.15);
     --bulma-menu-label-font-size: 0.85em;
-
     --enso-sidebar-width: 12rem;
     --enso-sidebar-collapsed-width: 3.5rem;
-
-    --bulma-navbar-height: 3.25rem;
-    --bulma-control-height: 2.125rem;
-    --bulma-radius-small: 0.2rem;
-    --bulma-radius: 0.4rem;
-    --bulma-radius-large: 0.6rem;
-}
-
-.vue-form .label {
-    font-weight: var(--bulma-label-weight);
+    --enso-tag-height: 1.8em;
+    --enso-tag-padding-x: 0.6em;
 }
 
 @mixin enso-shared-bulma-bridge {
@@ -38,7 +34,7 @@
     --bulma-card-background-color: var(--bulma-box-background-color);
     --bulma-card-content-background-color: var(--bulma-card-background-color);
     --bulma-card-footer-background-color: var(--bulma-card-header-background-color);
-    --bulma-card-footer-border-top: 1px solid var(--enso-surface-border);
+    --bulma-card-footer-border-top: none;
     --bulma-card-header-shadow: none;
 
     --bulma-navbar-background-color: var(--enso-shell-surface);
@@ -87,87 +83,102 @@
     --bulma-pagination-current-color: var(--bulma-primary-invert);
 
     --bulma-tabs-toggle-link-active-color: var(--bulma-text-strong);
+    --bulma-menu-list-border-left: 1px solid color-mix(in srgb, var(--bulma-text) 70%, transparent);
+    --bulma-menu-nested-list-margin: 0 0 0 0.25rem;
 }
 
 @mixin enso-light-theme-vars {
     --enso-shell-surface: #ffffff;
+    --enso-page-background: #eef2f7;
     --enso-surface: #ffffff;
     --enso-surface-border: #d9e1ec;
-
-    --enso-table-toolbar-surface: #ffffff;
     --enso-filter-surface: #ffffff;
     --enso-filter-control-surface: #f8fafc;
+    --enso-table-toolbar-surface: #ffffff;
 
     --enso-filter-active-color: #c95b16;
     --enso-filter-active-surface: #fff1eb;
     --enso-filter-active-border: #f4b99a;
     --enso-control-highlight-border: var(--bulma-border-active);
 
-    --enso-tooltip-background: var(--enso-surface);
-    --enso-tooltip-color: var(--bulma-text);
-    --enso-tooltip-border-color: var(--enso-surface-border);
-
     --bulma-text: #1f2937;
     --bulma-text-strong: #111827;
     --bulma-text-light: #6b7280;
+    --bulma-link-h: 215deg;
+    --bulma-link-s: 12%;
+    --bulma-link-l: 38%;
     --bulma-scheme-main-ter: #f3f6fa;
     --bulma-scheme-invert: #111827;
 
-    --bulma-body-background-color: #eef2f7;
+    --bulma-body-background-color: var(--enso-page-background);
     --bulma-navbar-item-color: #111827;
     --bulma-card-header-background-color: #f8fafc;
     --bulma-button-background-color: var(--bulma-card-header-background-color);
     --bulma-table-row-hover-background-color: #f3f6fa;
     --bulma-table-striped-row-even-background-color: #fbfcfe;
+    --bulma-border-hover: color-mix(in srgb, var(--bulma-grey) 36%, var(--bulma-border));
+    --bulma-border-active: color-mix(in srgb, var(--bulma-grey) 36%, var(--bulma-border));
+    --enso-tooltip-background: var(--enso-surface);
+    --enso-tooltip-color: var(--bulma-text);
+    --enso-tooltip-border-color: var(--enso-surface-border);
+    --enso-filter-border: var(--enso-surface-border);
+    --enso-filter-shadow: none;
+    --enso-table-toolbar-border: var(--enso-surface-border);
+    --bulma-input-hover-border-color: var(--bulma-border-hover);
+    --bulma-input-focus-border-color: var(--bulma-border-active);
 }
 
 @mixin enso-dark-theme-vars {
     --enso-shell-surface: #151922;
+    --enso-page-background: #0f131a;
     --enso-surface: #181e28;
     --enso-surface-border: #344052;
-
-    --enso-table-toolbar-surface: #212938;
     --enso-filter-surface: #1d2431;
     --enso-filter-control-surface: #181e28;
+    --enso-table-toolbar-surface: #212938;
 
     --enso-filter-active-color: #ff8e57;
     --enso-filter-active-surface: #3a241d;
     --enso-filter-active-border: #7a4632;
     --enso-control-highlight-border: var(--bulma-border-active);
 
-    --enso-tooltip-background: var(--enso-surface);
-    --enso-tooltip-color: var(--bulma-text);
-    --enso-tooltip-border-color: var(--enso-surface-border);
-
     --bulma-text: #d7deea;
     --bulma-text-strong: #f3f6fb;
     --bulma-text-light: #94a3b8;
+    --bulma-link-h: 220deg;
+    --bulma-link-s: 13%;
+    --bulma-link-l: 74%;
     --bulma-scheme-main-ter: #10151d;
     --bulma-scheme-invert: var(--bulma-text-strong);
 
-    --bulma-body-background-color: #0f131a;
+    --bulma-body-background-color: var(--enso-page-background);
     --bulma-navbar-item-color: #e5ebf3;
     --bulma-card-header-background-color: var(--enso-filter-surface);
     --bulma-button-background-color: var(--enso-table-toolbar-surface);
     --bulma-table-row-hover-background-color: var(--enso-table-toolbar-surface);
     --bulma-table-striped-row-even-background-color: color-mix(in srgb, var(--enso-table-toolbar-surface) 88%, transparent);
+    --bulma-border-hover: color-mix(in srgb, var(--bulma-text-light) 22%, var(--bulma-border));
+    --bulma-border-active: color-mix(in srgb, var(--bulma-text-light) 22%, var(--bulma-border));
+    --enso-tooltip-background: var(--enso-surface);
+    --enso-tooltip-color: var(--bulma-text);
+    --enso-tooltip-border-color: var(--enso-surface-border);
+    --enso-filter-border: var(--enso-surface-border);
+    --enso-filter-shadow: none;
+    --enso-table-toolbar-border: var(--enso-surface-border);
+    --bulma-input-hover-border-color: var(--bulma-border-hover);
+    --bulma-input-focus-border-color: var(--bulma-border-active);
 }
 
-[data-theme='light'] {
+[data-theme='light'],
+:root {
     @include enso-light-theme-vars;
     @include enso-shared-bulma-bridge;
 }
 
-[data-theme='dark'] {
+[data-theme='dark'],
+.theme-dark {
     @include enso-dark-theme-vars;
     @include enso-shared-bulma-bridge;
-}
-
-@media (prefers-color-scheme: light) {
-    html:not([data-theme]) {
-        @include enso-light-theme-vars;
-        @include enso-shared-bulma-bridge;
-    }
 }
 
 @media (prefers-color-scheme: dark) {

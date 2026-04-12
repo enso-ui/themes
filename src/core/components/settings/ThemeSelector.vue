@@ -1,44 +1,39 @@
 <script>
-import { useStore } from '../../../utils/pinia';
+import { preferences } from '@enso-ui/ui/src/pinia/preferences';
+
+const options = {
+    light: { label: 'Light', icon: 'sun' },
+    dark: { label: 'Dark', icon: 'moon' },
+    system: { label: 'System', icon: 'desktop' },
+};
 
 export default {
     name: 'ThemeSelector',
 
     computed: {
-        themes() {
-            return useStore('layout').themes;
-        },
         theme() {
-            return useStore('preferences').global.theme ?? '';
-        },
-        rtl() {
-            const localisation = useStore('localisation');
-            const preferences = useStore('preferences');
+            const theme = preferences().global.theme;
 
-            return localisation.rtlLanguages.includes(preferences.global.lang);
+            return Object.hasOwn(options, theme)
+                ? theme
+                : 'system';
         },
-        alternate() {
-            return Object.keys(this.themes)
-                .find(theme => theme.replace('-rtl', '') !== this.theme.replace('-rtl', ''))
-                + (this.rtl ? '-rtl' : '');
-        },
-        multiTheme() {
-            return Object.keys(this.themes).length > 1;
+        options() {
+            return options;
         },
     },
 
     methods: {
         setTheme(theme) {
-            return useStore('preferences').setTheme(theme);
+            return preferences().setTheme(theme);
         },
     },
 
     render() {
         return this.$slots.default({
-            multiTheme: this.multiTheme,
-            itemEvents: {
-                click: () => this.setTheme(this.alternate),
-            },
+            theme: this.theme,
+            options: this.options,
+            update: this.setTheme,
         });
     },
 };

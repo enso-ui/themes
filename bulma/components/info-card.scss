@@ -1,11 +1,2 @@
 .card.info-card {
-    border-top: 2px solid var(--bulma-border);
-    transition: border-color .2s ease;
-
-    &.is-primary { border-color: var(--bulma-primary); }
-    &.is-link { border-color: var(--bulma-link); }
-    &.is-info { border-color: var(--bulma-info); }
-    &.is-success { border-color: var(--bulma-success); }
-    &.is-warning { border-color: var(--bulma-warning); }
-    &.is-danger { border-color: var(--bulma-danger); }
 }
