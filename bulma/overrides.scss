@@ -1,5 +1,9 @@
 :root {
-    --bulma-size-normal: 0.95rem;
+    --bulma-family-secondary: var(--enso-font-family, "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif);
+    --bulma-family-primary: var(--bulma-family-secondary);
+    --bulma-body-family: var(--bulma-family-secondary);
+    --bulma-title-family: var(--bulma-family-secondary);
+    --bulma-subtitle-family: var(--bulma-family-secondary);
     --bulma-label-weight: var(--bulma-weight-normal);
     --bulma-button-weight: var(--bulma-weight-normal);
     --bulma-control-padding-vertical: calc(0.25em - 1px);
@@ -9,19 +13,14 @@
     --enso-navbar-height: 3.25rem;
     --enso-navbar-breakpoint: 0px;
     --bulma-control-height: 2.125rem;
-    --bulma-radius-small: var(--bulma-radius);
-    --bulma-radius: 0.5rem;
-    --bulma-radius-large: 0.55rem;
-    --bulma-tag-radius: 0.45rem;
-    --bulma-tag-delete-margin: 0;
+    --bulma-radius-small: 0.2rem;
+    --bulma-radius: 0.4rem;
+    --bulma-radius-large: 0.6rem;
     --bulma-box-shadow: 0 0.05em 0.15em 0.1em rgba(10, 10, 10, 0.15);
     --bulma-card-shadow: 0 0.05em 0.15em 0.1em rgba(10, 10, 10, 0.15);
     --bulma-card-header-shadow: 0 0.1em 0.1em rgba(10, 10, 10, 0.15);
-    --bulma-menu-label-font-size: 0.85em;
     --enso-sidebar-width: 12rem;
     --enso-sidebar-collapsed-width: 3.5rem;
-    --enso-tag-height: 1.8em;
-    --enso-tag-padding-x: 0.6em;
     --bulma-navbar-height: var(--enso-navbar-height);
 }
 
@@ -104,9 +103,6 @@
     --bulma-text: #1f2937;
     --bulma-text-strong: #111827;
     --bulma-text-light: #6b7280;
-    --bulma-link-h: 215deg;
-    --bulma-link-s: 12%;
-    --bulma-link-l: 38%;
     --bulma-scheme-main-ter: #f3f6fa;
     --bulma-scheme-invert: #111827;
 
@@ -145,9 +141,6 @@
     --bulma-text: #d7deea;
     --bulma-text-strong: #f3f6fb;
     --bulma-text-light: #94a3b8;
-    --bulma-link-h: 220deg;
-    --bulma-link-s: 13%;
-    --bulma-link-l: 74%;
     --bulma-scheme-main-ter: #10151d;
     --bulma-scheme-invert: var(--bulma-text-strong);
 
