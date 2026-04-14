@@ -1,6 +1,9 @@
 :root {
     --bulma-body-font-size: 0.9rem;
     --bulma-size-small: 0.8rem;
+    --bulma-size-normal: 0.9rem;
+    --bulma-size-medium: 1.0625rem;
+    --bulma-size-large: 1.25rem;
     --bulma-label-weight: 600;
     --bulma-family-secondary: var(--enso-font-family, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);
     --bulma-family-primary: var(--bulma-family-secondary);
@@ -14,7 +17,7 @@
     --bulma-button-padding-horizontal: 0.625em;
     --enso-navbar-height: 3.25rem;
     --enso-navbar-breakpoint: 0px;
-    --bulma-control-height: 2.125rem;
+    --bulma-control-height: 2.35em;
     --bulma-radius-small: 0.3rem;
     --bulma-radius: 0.4rem;
     --bulma-radius-medium: 0.5rem;
