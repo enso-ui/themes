@@ -1,10 +1,12 @@
 :root {
-    --bulma-family-secondary: var(--enso-font-family, "Inter", "SF Pro", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif);
+    --bulma-body-font-size: 0.9rem;
+    --bulma-size-small: 0.8rem;
+    --bulma-label-weight: 600;
+    --bulma-family-secondary: var(--enso-font-family, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);
     --bulma-family-primary: var(--bulma-family-secondary);
     --bulma-body-family: var(--bulma-family-secondary);
     --bulma-title-family: var(--bulma-family-secondary);
     --bulma-subtitle-family: var(--bulma-family-secondary);
-    --bulma-label-weight: var(--bulma-weight-normal);
     --bulma-button-weight: var(--bulma-weight-normal);
     --bulma-control-padding-vertical: calc(0.25em - 1px);
     --bulma-control-padding-horizontal: calc(0.5em - 1px);
@@ -48,6 +50,7 @@
     --bulma-dropdown-content-background-color: var(--enso-surface);
     --bulma-dropdown-item-color: var(--bulma-text);
     --bulma-dropdown-item-hover-color: var(--bulma-text-strong);
+    --bulma-label-color: var(--bulma-text-light);
 
     --bulma-button-color: var(--bulma-text);
     --bulma-button-border-color: var(--bulma-border);
