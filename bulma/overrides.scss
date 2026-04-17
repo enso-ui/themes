@@ -51,7 +51,6 @@
     --bulma-navbar-dropdown-item-hover-color: var(--bulma-text-strong);
     --bulma-navbar-dropdown-item-active-color: var(--bulma-link);
 
-    --bulma-dropdown-content-background-color: var(--enso-surface);
     --bulma-dropdown-item-color: var(--bulma-text);
     --bulma-dropdown-item-hover-color: var(--bulma-text-strong);
     --bulma-label-color: var(--bulma-text-light);
@@ -62,7 +61,6 @@
     --bulma-button-focus-box-shadow-color: transparent;
     --bulma-button-active-border-color: var(--bulma-border-active);
 
-    --bulma-input-background-color: var(--enso-surface);
     --bulma-input-color: var(--bulma-text-strong);
     --bulma-input-border-color: var(--bulma-border);
     --bulma-input-hover-color: var(--bulma-text-strong);
@@ -189,6 +187,11 @@
         @include enso-dark-theme-vars;
         @include enso-shared-bulma-bridge;
     }
+}
+
+:is(.input, .textarea, .money.input, .flatpickr-input.input, .button.input),
+.select select {
+    background-color: var(--enso-surface);
 }
 
 .pagination-link.is-current,
