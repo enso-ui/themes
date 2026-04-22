@@ -1,7 +1,9 @@
 .is-divider {
     border-top: 1px solid var(--bulma-border, #d9e1ec);
+    color: var(--enso-divider-color, var(--bulma-text-light, #6b7280));
 }
 
 .is-divider[data-title]::after {
-    background: var(--bulma-light, var(--bulma-scheme-main-bis, #f5f5f5));
+    background: var(--enso-divider-background, var(--bulma-scheme-main, #fff));
+    color: inherit;
 }
