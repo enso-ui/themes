@@ -128,8 +128,6 @@
     --enso-filter-border: var(--enso-surface-border);
     --enso-filter-shadow: none;
     --enso-table-toolbar-border: var(--enso-surface-border);
-    --bulma-input-hover-border-color: var(--bulma-border-hover);
-    --bulma-input-focus-border-color: var(--bulma-border-active);
 }
 
 @mixin enso-dark-theme-vars {
@@ -166,8 +164,6 @@
     --enso-filter-border: var(--enso-surface-border);
     --enso-filter-shadow: none;
     --enso-table-toolbar-border: var(--enso-surface-border);
-    --bulma-input-hover-border-color: var(--bulma-border-hover);
-    --bulma-input-focus-border-color: var(--bulma-border-active);
 }
 
 [data-theme='light'],
