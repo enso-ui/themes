@@ -4,7 +4,9 @@
             <div class="level is-mobile theme-selector">
                 <div class="level-left">
                     <div class="level-item">
-                        {{ i18n('Theme') }}
+                        <span class="menu-item-label">
+                            {{ i18n('Theme') }}
+                        </span>
                     </div>
                 </div>
                 <div class="level-right">
