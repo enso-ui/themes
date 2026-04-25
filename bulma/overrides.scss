@@ -16,7 +16,6 @@
     --bulma-button-padding-vertical: 0.25em;
     --bulma-button-padding-horizontal: 0.625em;
     --enso-navbar-height: 3.25rem;
-    --enso-navbar-breakpoint: 0px;
     --bulma-control-height: 2.35em;
     --bulma-radius-small: 0.3rem;
     --bulma-radius: 0.4rem;
@@ -117,17 +116,14 @@
     --bulma-body-background-color: var(--enso-page-background);
     --bulma-navbar-item-color: #111827;
     --bulma-card-header-background-color: #f8fafc;
-    --bulma-button-background-color: var(--bulma-card-header-background-color);
+    --bulma-button-background-color: #f8fafc;
     --bulma-table-row-hover-background-color: #f3f6fa;
     --bulma-table-striped-row-even-background-color: #fbfcfe;
-    --bulma-border-hover: color-mix(in srgb, var(--bulma-grey) 36%, var(--bulma-border));
+    --bulma-border-hover: color-mix(in srgb, var(--bulma-grey) 22%, var(--bulma-border));
     --bulma-border-active: color-mix(in srgb, var(--bulma-grey) 36%, var(--bulma-border));
     --enso-tooltip-background: var(--enso-surface);
     --enso-tooltip-color: var(--bulma-text);
     --enso-tooltip-border-color: var(--enso-surface-border);
-    --enso-filter-border: var(--enso-surface-border);
-    --enso-filter-shadow: none;
-    --enso-table-toolbar-border: var(--enso-surface-border);
 }
 
 @mixin enso-dark-theme-vars {
@@ -152,18 +148,15 @@
 
     --bulma-body-background-color: var(--enso-page-background);
     --bulma-navbar-item-color: #e5ebf3;
-    --bulma-card-header-background-color: var(--enso-filter-surface);
-    --bulma-button-background-color: var(--enso-table-toolbar-surface);
-    --bulma-table-row-hover-background-color: var(--enso-table-toolbar-surface);
-    --bulma-table-striped-row-even-background-color: color-mix(in srgb, var(--enso-table-toolbar-surface) 88%, transparent);
-    --bulma-border-hover: color-mix(in srgb, var(--bulma-text-light) 22%, var(--bulma-border));
+    --bulma-card-header-background-color: #1d2431;
+    --bulma-button-background-color: #212938;
+    --bulma-table-row-hover-background-color: #212938;
+    --bulma-table-striped-row-even-background-color: color-mix(in srgb, #212938 88%, transparent);
+    --bulma-border-hover: color-mix(in srgb, var(--bulma-text-light) 14%, var(--bulma-border));
     --bulma-border-active: color-mix(in srgb, var(--bulma-text-light) 22%, var(--bulma-border));
     --enso-tooltip-background: var(--enso-surface);
     --enso-tooltip-color: var(--bulma-text);
     --enso-tooltip-border-color: var(--enso-surface-border);
-    --enso-filter-border: var(--enso-surface-border);
-    --enso-filter-shadow: none;
-    --enso-table-toolbar-border: var(--enso-surface-border);
 }
 
 [data-theme='light'],
@@ -185,7 +178,7 @@
     }
 }
 
-:is(.input, .textarea, .money.input, .flatpickr-input.input, .button.input),
+:is(.input, .textarea, .flatpickr-input.input, .button.input),
 .select select {
     background-color: var(--enso-surface);
 }
