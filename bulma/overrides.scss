@@ -22,8 +22,7 @@
     --bulma-radius-medium: 0.5rem;
     --bulma-radius-large: 0.6rem;
     --bulma-box-shadow: 0 0.05em 0.15em 0.1em rgba(10, 10, 10, 0.15);
-    --bulma-card-shadow: 0 0.05em 0.15em 0.1em rgba(10, 10, 10, 0.15);
-    --bulma-card-header-shadow: 0 0.1em 0.1em rgba(10, 10, 10, 0.15);
+    --bulma-card-shadow: var(--bulma-box-shadow);
     --enso-sidebar-width: 12rem;
     --enso-sidebar-collapsed-width: 3.5rem;
     --bulma-navbar-height: var(--enso-navbar-height);
@@ -39,7 +38,6 @@
     --bulma-card-content-background-color: var(--bulma-card-background-color);
     --bulma-card-footer-background-color: var(--bulma-card-header-background-color);
     --bulma-card-footer-border-top: none;
-    --bulma-card-header-shadow: none;
 
     --bulma-navbar-background-color: var(--enso-shell-surface);
     --bulma-navbar-item-hover-color: var(--bulma-text-strong);
@@ -98,13 +96,8 @@
     --enso-page-background: #eef2f7;
     --enso-surface: #ffffff;
     --enso-surface-border: #d9e1ec;
-    --enso-filter-surface: #ffffff;
-    --enso-filter-control-surface: #f8fafc;
-    --enso-table-toolbar-surface: #ffffff;
-
-    --enso-filter-active-color: #c95b16;
-    --enso-filter-active-surface: #fff1eb;
-    --enso-filter-active-border: #f4b99a;
+    --enso-filter-control-surface: var(--bulma-card-header-background-color);
+    --enso-filter-active-surface: var(--enso-surface);
     --enso-control-highlight-border: var(--bulma-border-active);
 
     --bulma-text: #1f2937;
@@ -131,13 +124,8 @@
     --enso-page-background: #0f131a;
     --enso-surface: #181e28;
     --enso-surface-border: #344052;
-    --enso-filter-surface: #1d2431;
-    --enso-filter-control-surface: #181e28;
-    --enso-table-toolbar-surface: #212938;
-
-    --enso-filter-active-color: #ff8e57;
-    --enso-filter-active-surface: #3a241d;
-    --enso-filter-active-border: #7a4632;
+    --enso-filter-control-surface: var(--bulma-card-header-background-color);
+    --enso-filter-active-surface: var(--enso-surface);
     --enso-control-highlight-border: var(--bulma-border-active);
 
     --bulma-text: #d7deea;
@@ -148,6 +136,10 @@
 
     --bulma-body-background-color: var(--enso-page-background);
     --bulma-navbar-item-color: #e5ebf3;
+    --bulma-box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.18),
+        0 0 0 1px color-mix(in srgb, var(--enso-surface-border) 55%, transparent);
+    --bulma-card-shadow: var(--bulma-box-shadow);
     --bulma-card-header-background-color: #1d2431;
     --bulma-button-background-color: #212938;
     --bulma-table-row-hover-background-color: #212938;
