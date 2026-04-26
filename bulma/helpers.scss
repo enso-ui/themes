@@ -1,0 +1,109 @@
+@use "sass:list";
+@use "sass:map";
+@use "bulma/sass/utilities/initial-variables" as iv;
+@use "bulma/sass/utilities/mixins" as mx;
+
+$layout-spacing-properties: (
+    "margin": (
+        "shortcut": "m",
+        "allows-auto": true,
+    ),
+    "padding": (
+        "shortcut": "p",
+        "allows-auto": false,
+    ),
+) !default;
+
+$layout-spacing-directions: (
+    "": (),
+    "t": ("top"),
+    "r": ("right"),
+    "b": ("bottom"),
+    "l": ("left"),
+    "x": ("left", "right"),
+    "y": ("top", "bottom"),
+) !default;
+
+$layout-spacing-values: (
+    "0": 0,
+    "1": 0.25rem,
+    "2": 0.5rem,
+    "3": 0.75rem,
+    "4": 1rem,
+    "5": 1.5rem,
+    "6": 3rem,
+) !default;
+
+$layout-spacing-auto-directions: ("", "t", "r", "b", "l", "x", "y") !default;
+
+$layout-breakpoints: ("mobile", "touch", "tablet", "desktop", "widescreen", "fullhd") !default;
+
+@mixin responsive-layout-helper($breakpoint) {
+    @if list.index($layout-breakpoints, $breakpoint) == null {
+        @error "Unknown layout breakpoint `#{$breakpoint}`.";
+    }
+
+    @if $breakpoint == "mobile" {
+        @include mx.mobile {
+            @content;
+        }
+    } @else if $breakpoint == "touch" {
+        @include mx.touch {
+            @content;
+        }
+    } @else if $breakpoint == "tablet" {
+        @include mx.tablet {
+            @content;
+        }
+    } @else if $breakpoint == "desktop" {
+        @include mx.desktop {
+            @content;
+        }
+    } @else if $breakpoint == "widescreen" {
+        @include mx.widescreen {
+            @content;
+        }
+    } @else if $breakpoint == "fullhd" {
+        @include mx.fullhd {
+            @content;
+        }
+    }
+}
+
+@mixin set-layout-spacing($property, $axes, $value) {
+    @if list.length($axes) == 0 {
+        #{$property}: $value !important;
+    } @else {
+        @each $axis in $axes {
+            #{$property}-#{$axis}: $value !important;
+        }
+    }
+}
+
+@mixin responsive-layout-spacing-helper($breakpoint, $property, $shortcut, $suffix, $name, $value) {
+    $selector-suffix: if($suffix == "", "", $suffix);
+
+    @include responsive-layout-helper($breakpoint) {
+        .#{iv.$class-prefix}#{$shortcut}#{$selector-suffix}-#{$name}-#{$breakpoint} {
+            @include set-layout-spacing($property, $axes: map.get($layout-spacing-directions, $suffix), $value: $value);
+        }
+    }
+}
+
+@each $property, $config in $layout-spacing-properties {
+    $shortcut: map.get($config, "shortcut");
+
+    @each $suffix, $axes in $layout-spacing-directions {
+        @each $name, $value in $layout-spacing-values {
+            @each $breakpoint in $layout-breakpoints {
+                @include responsive-layout-spacing-helper($breakpoint, $property, $shortcut, $suffix, $name, $value);
+            }
+        }
+
+        @if map.get($config, "allows-auto") and list.index($layout-spacing-auto-directions, $suffix) {
+            @each $breakpoint in $layout-breakpoints {
+                @include responsive-layout-spacing-helper($breakpoint, $property, $shortcut, $suffix, "auto", auto);
+            }
+        }
+    }
+}
