@@ -1,6 +1,6 @@
 # Themes
 [![License](https://img.shields.io/badge/license-MIT-10b981.svg)](https://github.com/enso-ui/themes/blob/master/LICENSE)
-[![Stable](https://img.shields.io/badge/stable-3.3.33-2563eb.svg)](https://www.npmjs.com/package/@enso-ui/themes)
+[![Stable](https://img.shields.io/badge/stable-3.3.34-2563eb.svg)](https://www.npmjs.com/package/@enso-ui/themes)
 [![Downloads](https://img.shields.io/npm/dm/@enso-ui/themes.svg)](https://www.npmjs.com/package/@enso-ui/themes)
 [![Vue](https://img.shields.io/badge/vue-3.x-42b883.svg)](https://vuejs.org/)
 [![JavaScript](https://img.shields.io/badge/javascript-ES2020-f7df1e.svg)](https://developer.mozilla.org/docs/Web/JavaScript)
@@ -69,6 +69,41 @@ Examples:
 ```
 
 These helpers were added because responsive spacing is a recurring need in Bulma-based layouts, and the shared layer benefits from offering a predictable utility contract instead of forcing each application to reinvent small wrapper classes.
+
+## Typography Contract
+
+The shared theme layer exposes two application-level font handles:
+
+- `--enso-font-ui`
+- `--enso-font-content`
+
+Applications should override only these two variables locally, typically in the host application's main stylesheet:
+
+```scss
+:root {
+    --enso-font-ui: 'Plus Jakarta Sans', sans-serif;
+    --enso-font-content: 'DM Sans', system-ui, sans-serif;
+}
+```
+
+The shared theme layer maps them to the Bulma typography contract as follows:
+
+- `--bulma-body-family` → `--enso-font-content`
+- `--bulma-family-primary` → `--enso-font-content`
+- `--bulma-family-secondary` → `--enso-font-ui`
+
+This creates two semantic typography groups:
+
+- `content`
+  - body text
+  - table values
+  - input and select values
+  - general document copy
+- `ui`
+  - menu and navigation labels
+  - titles and subtitles
+  - buttons and action chrome
+  - shell controls such as tabs and settings items
 
 ## API
 
