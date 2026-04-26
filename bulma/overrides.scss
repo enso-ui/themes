@@ -94,12 +94,11 @@
 
 @mixin enso-light-theme-vars {
     --enso-shell-surface: #ffffff;
-    --enso-page-background: #eef2f7;
+    --enso-page-background: #F5F7FC;
     --enso-surface: #ffffff;
     --enso-surface-border: #d9e1ec;
     --enso-filter-control-surface: var(--bulma-card-header-background-color);
     --enso-filter-active-surface: var(--enso-surface);
-    --enso-control-highlight-border: var(--bulma-border-active);
 
     --bulma-text: #1f2937;
     --bulma-text-strong: #111827;
@@ -127,7 +126,6 @@
     --enso-surface-border: #344052;
     --enso-filter-control-surface: var(--bulma-card-header-background-color);
     --enso-filter-active-surface: var(--enso-surface);
-    --enso-control-highlight-border: var(--bulma-border-active);
 
     --bulma-text: #d7deea;
     --bulma-text-strong: #f3f6fb;
