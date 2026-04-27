@@ -10,11 +10,10 @@
                     </div>
                 </div>
                 <div class="level-right">
-                    <div class="level-item settings-control-select">
+                    <div class="level-item">
                         <dropdown>
                             <template #label>
-                                <span class="icon theme-trigger-icon"
-                                    :class="iconClass(theme)">
+                                <span :class="iconClass(theme)">
                                     <fa :icon="themeIcon(theme)"/>
                                 </span>
                             </template>
@@ -82,15 +81,3 @@ export default {
     },
 };
 </script>
-
-<style lang="scss">
-    .theme-selector {
-        .theme-trigger-icon {
-            transition: color .15s ease;
-        }
-
-        .button .icon:first-child {
-            margin: 0;
-        }
-    }
-</style>
