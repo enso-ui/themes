@@ -11,14 +11,15 @@
                 </div>
                 <div class="level-right">
                     <div class="level-item">
-                        <dropdown>
+                        <dropdown class="theme-selector">
                             <template #label>
                                 <span :class="iconClass(theme)">
                                     <fa :icon="themeIcon(theme)"/>
                                 </span>
                             </template>
                             <template #items>
-                                <dropdown-item v-for="(option, key) in options"
+                                <dropdown-item class="has-text-centered p-2"
+                                    v-for="(option, key) in options"
                                     :key="key"
                                     :selected="theme === key"
                                     @select="update(key)">
@@ -81,3 +82,14 @@ export default {
     },
 };
 </script>
+
+<style lang="scss">
+.theme-selector {
+        .dropdown-menu {
+            .dropdown-content {
+                min-width: 3.3rem;
+                width: 100%;
+            }
+        }
+    }
+</style>
