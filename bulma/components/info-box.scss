@@ -9,11 +9,19 @@
     );
 
     border-top: 2px solid var(--bulma-border);
+    padding: 0;
     transition: border-color .75s ease, box-shadow 0.3s ease-in-out;
     position: relative;
 
     .box-header {
-        border-radius: inherit;
+        border-bottom: 1px solid var(--bulma-border);
+        border-radius: inherit inherit 0 0;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .box-body {
+        padding: 0.75rem;
     }
 
     @each $name, $color in $info-box-colors {
