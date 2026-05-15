@@ -1,6 +1,6 @@
 # Themes
 [![License](https://img.shields.io/badge/license-MIT-10b981.svg)](https://github.com/enso-ui/themes/blob/master/LICENSE)
-[![Stable](https://img.shields.io/badge/stable-3.3.35-2563eb.svg)](https://www.npmjs.com/package/@enso-ui/themes)
+[![Stable](https://img.shields.io/badge/stable-3.3.41-2563eb.svg)](https://www.npmjs.com/package/@enso-ui/themes)
 [![Downloads](https://img.shields.io/npm/dm/@enso-ui/themes.svg)](https://www.npmjs.com/package/@enso-ui/themes)
 [![Vue](https://img.shields.io/badge/vue-3.x-42b883.svg)](https://vuejs.org/)
 [![JavaScript](https://img.shields.io/badge/javascript-ES2020-f7df1e.svg)](https://developer.mozilla.org/docs/Web/JavaScript)
@@ -69,6 +69,30 @@ Examples:
 ```
 
 These helpers were added because responsive spacing is a recurring need in Bulma-based layouts, and the shared layer benefits from offering a predictable utility contract instead of forcing each application to reinvent small wrapper classes.
+
+## Info Box Contract
+
+The shared `info-box` class can be added to any Bulma `.box` to get the Enso
+informational card shell:
+
+```html
+<div class="box info-box is-info">
+    <div class="box-header">
+        <p class="title is-6">Client & Contact</p>
+    </div>
+
+    <div class="box-body">
+        ...
+    </div>
+</div>
+```
+
+Behavior:
+
+- `.box.info-box` removes default box padding and adds the top accent border
+- `.is-primary`, `.is-link`, `.is-info`, `.is-success`, `.is-warning`, and `.is-danger` color the accent border
+- `.box-header` has a full-width bottom border, bottom radius set to `0`, and default `1rem` padding
+- `.box-body` has default `0.75rem` padding
 
 ## Typography Contract
 
