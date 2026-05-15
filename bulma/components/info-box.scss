@@ -1,5 +1,14 @@
 .box.info-box {
-    border-top: 2px solid $light;
+    $info-box-colors: (
+        "primary": var(--bulma-primary),
+        "link": var(--bulma-link),
+        "info": var(--bulma-info),
+        "success": var(--bulma-success),
+        "warning": var(--bulma-warning),
+        "danger": var(--bulma-danger),
+    );
+
+    border-top: 2px solid var(--bulma-border);
     transition: border-color .75s ease, box-shadow 0.3s ease-in-out;
     position: relative;
 
@@ -7,9 +16,7 @@
         border-radius: inherit;
     }
 
-    @each $name, $pair in $colors {
-        $color: nth($pair, 1);
-
+    @each $name, $color in $info-box-colors {
         &.is-#{$name} {
             border-color: $color;
         }
