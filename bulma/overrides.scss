@@ -117,6 +117,8 @@
     --bulma-table-striped-row-even-background-color: #fbfcfe;
     --bulma-border-hover: color-mix(in srgb, var(--bulma-grey) 22%, var(--bulma-border));
     --bulma-border-active: color-mix(in srgb, var(--bulma-grey) 36%, var(--bulma-border));
+    --enso-datepicker-accent: var(--bulma-dark);
+    --enso-datepicker-accent-invert: var(--bulma-dark-invert);
     --enso-tooltip-background: var(--enso-surface);
     --enso-tooltip-color: var(--bulma-text);
     --enso-tooltip-border-color: var(--enso-surface-border);
@@ -148,6 +150,8 @@
     --bulma-table-striped-row-even-background-color: color-mix(in srgb, #212938 88%, transparent);
     --bulma-border-hover: color-mix(in srgb, var(--bulma-text-light) 14%, var(--bulma-border));
     --bulma-border-active: color-mix(in srgb, var(--bulma-text-light) 22%, var(--bulma-border));
+    --enso-datepicker-accent: var(--bulma-text-strong);
+    --enso-datepicker-accent-invert: var(--enso-page-background);
     --enso-tooltip-background: var(--enso-surface);
     --enso-tooltip-color: var(--bulma-text);
     --enso-tooltip-border-color: var(--enso-surface-border);
@@ -182,4 +186,31 @@
     background-color: var(--bulma-dark);
     border-color: var(--bulma-dark);
     color: var(--bulma-dark-invert);
+}
+
+.control.has-icons-left .flatpickr-input.input ~ .icon.is-left {
+    color: var(--enso-datepicker-accent) !important;
+}
+
+.flatpickr-calendar {
+    .flatpickr-day.today {
+        border-color: var(--enso-datepicker-accent) !important;
+    }
+
+    .flatpickr-day.selected,
+    .flatpickr-day.startRange,
+    .flatpickr-day.endRange,
+    .flatpickr-day.selected.inRange,
+    .flatpickr-day.startRange.inRange,
+    .flatpickr-day.endRange.inRange,
+    .flatpickr-day.selected:focus,
+    .flatpickr-day.startRange:focus,
+    .flatpickr-day.endRange:focus,
+    .flatpickr-day.selected:hover,
+    .flatpickr-day.startRange:hover,
+    .flatpickr-day.endRange:hover {
+        background: var(--enso-datepicker-accent) !important;
+        border-color: var(--enso-datepicker-accent) !important;
+        color: var(--enso-datepicker-accent-invert) !important;
+    }
 }
