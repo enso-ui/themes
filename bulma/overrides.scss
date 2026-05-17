@@ -69,7 +69,9 @@
     --bulma-input-focus-border-color: var(--bulma-border-active);
     --bulma-input-focus-shadow-alpha: 0;
     --bulma-input-icon-color: var(--bulma-text-light);
-    --bulma-input-icon-active-color: var(--bulma-text-strong);
+    --bulma-input-icon-hover-color: var(--enso-input-icon-accent);
+    --bulma-input-icon-focus-color: var(--enso-input-icon-accent);
+    --bulma-input-icon-active-color: var(--enso-input-icon-accent);
 
     --bulma-file-cta-background-color: var(--bulma-input-background-color);
     --bulma-file-cta-color: var(--bulma-text);
@@ -117,6 +119,7 @@
     --bulma-table-striped-row-even-background-color: #fbfcfe;
     --bulma-border-hover: color-mix(in srgb, var(--bulma-grey) 22%, var(--bulma-border));
     --bulma-border-active: color-mix(in srgb, var(--bulma-grey) 36%, var(--bulma-border));
+    --enso-input-icon-accent: var(--bulma-dark);
     --enso-datepicker-accent: var(--bulma-dark);
     --enso-datepicker-accent-invert: var(--bulma-dark-invert);
     --enso-tooltip-background: var(--enso-surface);
@@ -150,6 +153,7 @@
     --bulma-table-striped-row-even-background-color: color-mix(in srgb, #212938 88%, transparent);
     --bulma-border-hover: color-mix(in srgb, var(--bulma-text-light) 14%, var(--bulma-border));
     --bulma-border-active: color-mix(in srgb, var(--bulma-text-light) 22%, var(--bulma-border));
+    --enso-input-icon-accent: var(--bulma-text-strong);
     --enso-datepicker-accent: var(--bulma-text-strong);
     --enso-datepicker-accent-invert: var(--enso-page-background);
     --enso-tooltip-background: var(--enso-surface);
