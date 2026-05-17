@@ -205,6 +205,12 @@
     }
 }
 
+.control.has-icons-right .input:is(:hover, :focus) ~ .icon.is-right.clear-button .delete,
+.control.has-icons-right .select:is(:hover, :focus) ~ .icon.is-right.clear-button .delete,
+.control.has-icons-right .select select:is(:hover, :focus) ~ .icon.is-right.clear-button .delete {
+    background-color: var(--enso-input-icon-accent) !important;
+}
+
 .control.has-icons-left .flatpickr-input.input ~ .icon.is-left {
     color: var(--enso-datepicker-accent) !important;
 }
