@@ -192,6 +192,19 @@
     color: var(--bulma-dark-invert);
 }
 
+.control.has-icons-left .input:is(:hover, :focus) ~ .icon,
+.control.has-icons-right .input:is(:hover, :focus) ~ .icon,
+.control.has-icons-left .select:is(:hover, :focus) ~ .icon,
+.control.has-icons-right .select:is(:hover, :focus) ~ .icon,
+.control.has-icons-left .select select:is(:hover, :focus) ~ .icon,
+.control.has-icons-right .select select:is(:hover, :focus) ~ .icon {
+    color: var(--enso-input-icon-accent) !important;
+
+    svg {
+        color: currentColor;
+    }
+}
+
 .control.has-icons-left .flatpickr-input.input ~ .icon.is-left {
     color: var(--enso-datepicker-accent) !important;
 }
