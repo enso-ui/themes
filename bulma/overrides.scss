@@ -22,9 +22,10 @@
     --bulma-radius: 0.4rem;
     --bulma-radius-medium: 0.5rem;
     --bulma-radius-large: 0.6rem;
-    --bulma-message-radius: var(--bulma-radius-large);
-    --bulma-message-header-radius: var(--bulma-radius-large);
-    --bulma-message-body-radius: var(--bulma-radius-large);
+    --bulma-box-radius: var(--bulma-radius-large);
+    --bulma-message-radius: var(--bulma-box-radius);
+    --bulma-message-header-radius: var(--bulma-box-radius);
+    --bulma-message-body-radius: var(--bulma-box-radius);
     --bulma-box-shadow: 0 0.05em 0.15em 0.1em rgba(10, 10, 10, 0.15);
     --bulma-card-shadow: var(--bulma-box-shadow);
     --enso-sidebar-width: 12rem;
